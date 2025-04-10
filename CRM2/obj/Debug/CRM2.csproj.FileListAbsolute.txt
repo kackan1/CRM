@@ -7,3 +7,5 @@ C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.csproj.GenerateResource.cach
 C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.csproj.CoreCompileInputs.cache
 C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.exe
 C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.pdb
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.CRM.resources
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.forms.PackageForm.resources

@@ -17,8 +17,10 @@ namespace CRM2.Views
         {
             //this panel properties
             Dock = DockStyle.Fill;
-            BackColor = System.Drawing.Color.DarkViolet;
-            
+            BackColor = Color.primary;
+            MinimumSize = new System.Drawing.Size(800, 600);
+
+
             //declared controls
             Button tickets = new Button();
             Button hours = new Button();
@@ -31,29 +33,53 @@ namespace CRM2.Views
             layout.ColumnCount = 3;
             layout.RowCount = 6;
             layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 15));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 15));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 15));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 15));
-            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
+            layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             this.Controls.Add(layout);
-            layout.Controls.Add(tickets, 1, 1);
-            layout.Controls.Add(hours, 1, 2);
-            layout.Controls.Add(package, 1, 3);
-            layout.Controls.Add(exit, 1, 4);
-
+            
             //tickets button properties
             tickets.Name = "tickets";
             tickets.Text = "Zgłoszenia";
-            tickets.MinimumSize = new System.Drawing.Size(100, 50);
-            tickets.MaximumSize = new System.Drawing.Size(200, 100);
-            tickets.Dock = DockStyle.Fill;
-            tickets.BackColor = System.Drawing.Color.White;
-            tickets.Font = new System.Drawing.Font("Arial", 12);
             tickets.Click += new EventHandler(Tickets_Click);
+            layout.Controls.Add(tickets, 1, 1);
+
+            //hours button properties
+            hours.Name = "hours";
+            hours.Text = "Godziny";
+            hours.Click += new EventHandler(Hours_Click);
+            layout.Controls.Add(hours, 1, 2);
+
+            //package button properties
+            package.Name = "package";
+            package.Text = "Pakiety";
+            package.Click += new EventHandler(Package_Click);
+            layout.Controls.Add(package, 1, 3);
+
+            //exit button properties
+            exit.Name = "exit";
+            exit.Text = "Wyjście";
+            exit.Click += new EventHandler(Exit_Click);
+            layout.Controls.Add(exit, 1, 4);
+        }
+
+        internal class Button : System.Windows.Forms.Button
+        {
+            public Button()
+            {
+                SetStyle(ControlStyles.Selectable, false);
+                Dock = DockStyle.Fill;
+                BackColor = Color.secondary;
+                ForeColor = Color.text;
+                Font = new System.Drawing.Font("Arial", 12);
+                MinimumSize = new System.Drawing.Size(180, 60);
+                MaximumSize = new System.Drawing.Size(180, 60);
+            }
         }
 
         private void Tickets_Click(object sender, EventArgs e)
@@ -66,7 +92,7 @@ namespace CRM2.Views
         }
         private void Package_Click(object sender, EventArgs e)
         {
-            ViewManager.SwitchView(this, new PackagePanel());
+            ViewManager.OpenPackageForm();
         }
         private void Exit_Click(object sender, EventArgs e)
         {

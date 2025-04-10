@@ -1,0 +1,11 @@
+C:\Users\ANTEEO-KK\source\repos\CRM2\bin\Debug\CRM2.exe.config
+C:\Users\ANTEEO-KK\source\repos\CRM2\bin\Debug\CRM2.exe
+C:\Users\ANTEEO-KK\source\repos\CRM2\bin\Debug\CRM2.pdb
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.csproj.AssemblyReference.cache
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.Properties.Resources.resources
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.csproj.GenerateResource.cache
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.csproj.CoreCompileInputs.cache
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.exe
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.pdb
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.CRM.resources
+C:\Users\ANTEEO-KK\source\repos\CRM2\obj\Debug\CRM2.forms.PackageForm.resources
